@@ -15,8 +15,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
-
     buildTypes {
+        libraryVariants.all { variant ->
+            variant.buildConfigField "String", "IMGUR_API_CLIENT_ID", "\"" + Secrets.imgurApiKey + "\""
+        }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
@@ -28,7 +30,10 @@ android {
 dependencies {
     //kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$Versions.Tools.kotlin"
-
+    implementation "com.squareup.retrofit2:retrofit:$Versions.retrofit"
+    implementation "com.squareup.retrofit2:converter-moshi:$Versions.retrofit"
+    implementation "com.squareup.moshi:moshi-kotlin:$Versions.moshiKotlin"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$Versions.moshiKotlin"
 
     testImplementation "junit:junit:$Versions.junit"
     testImplementation "io.mockk:mockk:$Versions.mockk"

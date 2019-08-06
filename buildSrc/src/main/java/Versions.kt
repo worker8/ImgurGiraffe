@@ -20,13 +20,15 @@ object Versions {
     const val pagingRx = "1.0.0-rc1"
     const val material = "1.1.0-alpha09"
     const val result = "2.0.0"
-    const val retrofit = "2.4.0"
+    const val retrofit = "2.6.1"
+    const val moshiKotlin = "1.8.0"
     const val rxAndroid = "2.1.0"
     const val rxBinding = "3.0.0-alpha2"
     const val rxJava = "2.1.13"
     const val stetho = "1.5.0"
     const val support = "28.0.0"
     const val testRunner = "1.0.2"
+    const val junit5 = "1.5.0.0"
 
 }
 
