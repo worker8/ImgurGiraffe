@@ -1,1 +1,1 @@
-include ':app', ':imgurclient'
+include ':app', ':giraffe-moshi-model'
