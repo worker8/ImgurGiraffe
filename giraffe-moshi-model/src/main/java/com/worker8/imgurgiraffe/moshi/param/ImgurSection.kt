@@ -1,4 +1,4 @@
-package com.worker8.imgurgiraffe.param
+package com.worker8.imgurgiraffe.moshi.param
 
 enum class ImgurSection {
     hot, top, user;

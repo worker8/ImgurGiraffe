@@ -1,4 +1,4 @@
-package com.worker8.imgurgiraffe.model
+package com.worker8.imgurgiraffe.moshi.model
 
 data class ImgurAdConfig(
     val highRiskFlags: List<String>,

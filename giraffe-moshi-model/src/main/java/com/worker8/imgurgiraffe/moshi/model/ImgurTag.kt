@@ -1,4 +1,4 @@
-package com.worker8.imgurgiraffe.model
+package com.worker8.imgurgiraffe.moshi.model
 
 data class ImgurTag(
     val accent: String,

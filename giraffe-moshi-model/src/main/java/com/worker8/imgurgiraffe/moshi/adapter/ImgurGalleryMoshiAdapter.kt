@@ -1,14 +1,13 @@
-package com.worker8.imgurgiraffe.adapter
+package com.worker8.imgurgiraffe.moshi.adapter
 
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.ToJson
-import com.worker8.imgurgiraffe.model.ImgurGalleryAlbum
-import com.worker8.imgurgiraffe.model.ImgurGalleryImage
-import com.worker8.imgurgiraffe.model.ImgurGalleryItemBase
-import com.worker8.imgurgiraffe.model.MoshiImgurGallery
+import com.worker8.imgurgiraffe.moshi.model.ImgurGalleryAlbum
+import com.worker8.imgurgiraffe.moshi.model.ImgurGalleryImage
+import com.worker8.imgurgiraffe.moshi.model.ImgurGalleryItemBase
+import com.worker8.imgurgiraffe.moshi.model.MoshiImgurGallery
 
 class ImgurGalleryMoshiAdapter {
-
     @ToJson
     internal fun toJson(imgurGalleryItemBase: ImgurGalleryItemBase): MoshiImgurGallery {
         return if (imgurGalleryItemBase is ImgurGalleryAlbum) {

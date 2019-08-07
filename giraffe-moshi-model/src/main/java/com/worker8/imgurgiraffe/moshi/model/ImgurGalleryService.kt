@@ -1,8 +1,7 @@
-package com.worker8.imgurgiraffe.model
-
-import com.worker8.imgurgiraffe.param.ImgurSection
-import com.worker8.imgurgiraffe.param.ImgurSort
-import com.worker8.imgurgiraffe.param.ImgurWindow
+package com.worker8.imgurgiraffe.moshi.model
+import com.worker8.imgurgiraffe.moshi.param.ImgurSection
+import com.worker8.imgurgiraffe.moshi.param.ImgurSort
+import com.worker8.imgurgiraffe.moshi.param.ImgurWindow
 
 import retrofit2.Call
 import retrofit2.http.GET
