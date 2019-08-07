@@ -2,10 +2,9 @@ package com.worker8.imgurgiraffe.moshi
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
-import com.worker8.imgurgiraffe.moshi.factory.ImgurTestFactory
 import com.worker8.imgurgiraffe.moshi.model.ImgurGalleryItemBase
-import com.worker8.imgurgiraffe.moshi.model.ImgurGalleryService
 import com.worker8.imgurgiraffe.moshi.model.ImgurResponse
+import com.worker8.imgurgiraffe.retrofit.factory.MoshiTestFactory
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
@@ -13,8 +12,7 @@ import org.junit.Before
 import org.junit.Test
 import java.io.BufferedReader
 
-class GalleryDeserializationTest {
-    lateinit var imgurService: ImgurGalleryService
+class ImgurGalleryMoshiTest {
     lateinit var moshi: Moshi
 
     val galleryJson: String by lazy {
@@ -24,20 +22,7 @@ class GalleryDeserializationTest {
 
     @Before
     fun setup() {
-        val imgurTestFactory = ImgurTestFactory(
-            clientId = BuildConfig.IMGUR_API_CLIENT_ID,
-            baseUrl = "https://api.imgur.com/3/"
-        )
-        moshi = imgurTestFactory.buildMoshi()
-        val retrofit = imgurTestFactory.buildRetrofit(moshi)
-        imgurService = retrofit.create(ImgurGalleryService::class.java)
-    }
-
-    @Test
-    fun testFirstCall() {
-        val response = imgurService.galleryImages().execute()
-        assertEquals(true, response.isSuccessful)
-        System.out.println(galleryJson)
+        moshi = MoshiTestFactory().buildMoshi()
     }
 
     @Test

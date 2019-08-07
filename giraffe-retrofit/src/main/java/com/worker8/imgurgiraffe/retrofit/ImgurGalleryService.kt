@@ -1,4 +1,6 @@
-package com.worker8.imgurgiraffe.moshi.model
+package com.worker8.imgurgiraffe.retrofit
+import com.worker8.imgurgiraffe.moshi.model.ImgurGalleryItemBase
+import com.worker8.imgurgiraffe.moshi.model.ImgurResponse
 import com.worker8.imgurgiraffe.moshi.param.ImgurSection
 import com.worker8.imgurgiraffe.moshi.param.ImgurSort
 import com.worker8.imgurgiraffe.moshi.param.ImgurWindow

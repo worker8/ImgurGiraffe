@@ -1,4 +1,4 @@
-package com.worker8.imgurgiraffe.moshi.factory
+package com.worker8.imgurgiraffe.retrofit.factory
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
@@ -37,12 +37,9 @@ class ImgurTestFactory(
     }
 
     fun buildMoshi(): Moshi {
-        val types =
-            Types.newParameterizedType(ImgurResponse::class.java, ImgurGalleryItemBase::class.java)
         return Moshi
             .Builder()
             .add(ImgurGalleryMoshiAdapter())
-            //.add(DynamicAdapterFactory())
             .build()
     }
 }
