@@ -1,4 +1,4 @@
-package com.worker8.imgurgiraffe
+package com.worker8.imgurgiraffe.adapter
 
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.ToJson

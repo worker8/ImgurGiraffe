@@ -2,7 +2,7 @@ package com.worker8.imgurgiraffe.factory
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
-import com.worker8.imgurgiraffe.ImgurGalleryMoshiAdapter
+import com.worker8.imgurgiraffe.adapter.ImgurGalleryMoshiAdapter
 import com.worker8.imgurgiraffe.model.ImgurGalleryItemBase
 import com.worker8.imgurgiraffe.model.ImgurResponse
 import okhttp3.OkHttpClient
