@@ -1,4 +1,4 @@
-package com.worker8.imgurgiraffe;
+package com.worker8.imgurgiraffe.moshi;
 
 import org.junit.Test;
 

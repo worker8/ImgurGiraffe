@@ -1,18 +1,17 @@
-package com.worker8.imgurgiraffe
+package com.worker8.imgurgiraffe.moshi
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
-import com.worker8.imgurgiraffe.factory.ImgurTestFactory
-import com.worker8.imgurgiraffe.model.ImgurGalleryItemBase
-import com.worker8.imgurgiraffe.model.ImgurGalleryService
-import com.worker8.imgurgiraffe.model.ImgurResponse
+import com.worker8.imgurgiraffe.moshi.factory.ImgurTestFactory
+import com.worker8.imgurgiraffe.moshi.model.ImgurGalleryItemBase
+import com.worker8.imgurgiraffe.moshi.model.ImgurGalleryService
+import com.worker8.imgurgiraffe.moshi.model.ImgurResponse
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Test
 import java.io.BufferedReader
-
 
 class GalleryDeserializationTest {
     lateinit var imgurService: ImgurGalleryService

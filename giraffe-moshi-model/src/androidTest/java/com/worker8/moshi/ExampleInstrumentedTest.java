@@ -1,4 +1,4 @@
-package com.worker8.model;
+package com.worker8.moshi.model;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;

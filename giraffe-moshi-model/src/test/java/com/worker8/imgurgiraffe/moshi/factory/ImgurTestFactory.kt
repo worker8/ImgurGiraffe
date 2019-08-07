@@ -1,10 +1,10 @@
-package com.worker8.imgurgiraffe.factory
+package com.worker8.imgurgiraffe.moshi.factory
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
-import com.worker8.imgurgiraffe.adapter.ImgurGalleryMoshiAdapter
-import com.worker8.imgurgiraffe.model.ImgurGalleryItemBase
-import com.worker8.imgurgiraffe.model.ImgurResponse
+import com.worker8.imgurgiraffe.moshi.adapter.ImgurGalleryMoshiAdapter
+import com.worker8.imgurgiraffe.moshi.model.ImgurGalleryItemBase
+import com.worker8.imgurgiraffe.moshi.model.ImgurResponse
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
