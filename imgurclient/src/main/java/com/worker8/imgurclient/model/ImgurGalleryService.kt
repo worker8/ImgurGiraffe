@@ -19,5 +19,5 @@ interface ImgurGalleryService {
         window: ImgurWindow = ImgurWindow.default(),
         @Path("page")
         page: Int = 0
-    ): Call<ImgurResponse>
+    ): Call<ImgurResponse<ImgurGalleryItemBase>>
 }

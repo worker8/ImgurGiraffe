@@ -43,15 +43,15 @@ data class ImgurGalleryImage(
     val animated: Boolean, // image specific
     val bandwidth: Long, // image specific
     val edited: Int, // image specific
-    val gifv: String, // image specific
+    val gifv: String?, // image specific
     val has_sound: Boolean, // image specific
     val height: Int, // image specific
-    val hls: String, // image specific
+    val hls: String?, // image specific
     val looping: Boolean? = null, // image specific
-    val mp4: String, // image specific
-    val mp4_size: Int, // image specific
+    val mp4: String?, // image specific
+    val mp4_size: Int?, // image specific
     val width: Int, // image specific
-    val processing: ImgurProcessing, // image specific
+    val processing: ImgurProcessing?, // image specific - seems to be only available if 'animated'
     val size: Int, // image specific
     val type: String, // image specific
 
