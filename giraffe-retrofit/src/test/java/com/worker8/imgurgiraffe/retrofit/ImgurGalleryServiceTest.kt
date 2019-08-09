@@ -9,12 +9,6 @@ import java.io.BufferedReader
 
 class ImgurGalleryServiceTest {
     lateinit var imgurService: ImgurGalleryService
-    lateinit var moshi: Moshi
-
-    val galleryJson: String by lazy {
-        val inputStream = javaClass.classLoader.getResourceAsStream("gallery.json")
-        inputStream.bufferedReader().use(BufferedReader::readText)
-    }
 
     @Before
     fun setup() {
@@ -22,7 +16,7 @@ class ImgurGalleryServiceTest {
             clientId = BuildConfig.IMGUR_API_CLIENT_ID,
             baseUrl = "https://api.imgur.com/3/"
         )
-        moshi = imgurTestFactory.buildMoshi()
+        val moshi = imgurTestFactory.buildMoshi()
         val retrofit = imgurTestFactory.buildRetrofit(moshi)
         imgurService = retrofit.create(ImgurGalleryService::class.java)
     }
