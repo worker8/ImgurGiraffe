@@ -1,0 +1,43 @@
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+apply plugin: "kotlin-kapt"
+
+android {
+    compileSdkVersion Versions.AndroidConfigs.sdkVersion
+
+    defaultConfig {
+        minSdkVersion Versions.AndroidConfigs.minSdkVersion
+        targetSdkVersion Versions.AndroidConfigs.sdkVersion
+        versionCode Versions.AndroidConfigs.versionCode
+        versionName Versions.AndroidConfigs.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        libraryVariants.all { variant ->
+            variant.buildConfigField "String", "IMGUR_API_CLIENT_ID", "\"" + Secrets.imgurApiKey + "\""
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+
+}
+
+dependencies {
+    implementation project(":giraffe-moshi-model")
+
+    //kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$Versions.Tools.kotlin"
+    implementation "com.squareup.retrofit2:retrofit:$Versions.retrofit"
+    implementation "com.squareup.retrofit2:converter-moshi:$Versions.retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$Versions.retrofit"
+
+    testImplementation "junit:junit:$Versions.junit"
+    testImplementation "io.mockk:mockk:$Versions.mockk"
+    androidTestImplementation "androidx.test.ext:junit:1.1.0"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.1.1"
+}

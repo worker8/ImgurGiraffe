@@ -1,6 +1,6 @@
-package com.worker8.imgurgiraffe.retrofit
+package com.worker8.imgurgiraffe.rxjava
 
-import com.worker8.imgurgiraffe.retrofit.factory.ImgurTestFactory
+import com.worker8.imgurgiraffe.rxjava.factory.ImgurTestFactory
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -21,7 +21,7 @@ class ImgurGalleryServiceTest {
 
     @Test
     fun galleryImages() {
-        val response = imgurService.galleryImages().execute()
-        assertEquals(true, response.isSuccessful)
+        val response = imgurService.galleryImages().blockingGet()
+        assertEquals(true, response.success)
     }
 }

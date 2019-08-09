@@ -1,1 +1,1 @@
-include ':app', ':giraffe-moshi-model', ':giraffe-retrofit'
+include ':app', ':giraffe-moshi-model', ':giraffe-retrofit', ':giraffe-retrofit-rxjava'
