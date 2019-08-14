@@ -35,17 +35,11 @@ class ImgurGalleryServiceTest {
     }
 
     @Test
-    fun galleryImages() {
-        val response = imgurService.galleryImages().execute()
-        assertEquals(true, response.isSuccessful)
-    }
-
-    @Test
     fun testCoroutine() {
         runBlocking {
             launch(Dispatchers.Main) {
                 // Will be launched in the mainThreadSurrogate dispatcher
-                val response = imgurService.galleryImages2()
+                val response = imgurService.galleryImages()
                 assertEquals(true, response.success)
             }
         }

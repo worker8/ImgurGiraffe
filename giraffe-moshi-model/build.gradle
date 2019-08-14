@@ -32,8 +32,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$Versions.Tools.kotlin"
     implementation "com.squareup.retrofit2:retrofit:$Versions.retrofit"
     implementation "com.squareup.retrofit2:converter-moshi:$Versions.retrofit"
-    implementation "com.squareup.moshi:moshi-kotlin:$Versions.moshiKotlin"
-    kapt "com.squareup.moshi:moshi-kotlin-codegen:$Versions.moshiKotlin"
+    implementation "com.squareup.moshi:moshi-kotlin:$Versions.moshi"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$Versions.moshi"
 
     testImplementation "junit:junit:$Versions.junit"
     testImplementation "io.mockk:mockk:$Versions.mockk"

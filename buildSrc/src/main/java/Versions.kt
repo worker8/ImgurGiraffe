@@ -21,7 +21,7 @@ object Versions {
     const val material = "1.1.0-alpha09"
     const val result = "2.0.0"
     const val retrofit = "2.6.1"
-    const val moshiKotlin = "1.8.0"
+    const val moshi = "1.8.0"
     const val rxAndroid = "2.1.0"
     const val rxBinding = "3.0.0-alpha2"
     const val rxJava = "2.1.13"

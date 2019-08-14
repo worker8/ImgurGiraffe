@@ -1,7 +1,7 @@
 package com.worker8.imgurgiraffe.moshi.model
 
 data class ImgurTag(
-    val accent: String,
+    val accent: String?,
     val background_hash: String,
     val background_is_animated: Boolean,
     val description: String,
@@ -11,10 +11,10 @@ data class ImgurTag(
     val following: Boolean,
     val is_promoted: Boolean,
     val is_whitelisted: Boolean,
-    val logo_destination_url: Any,
-    val logo_hash: Any,
+    val logo_destination_url: String?,
+    val logo_hash: String?,
     val name: String,
-    val thumbnail_hash: Any,
+    val thumbnail_hash: String?,
     val thumbnail_is_animated: Boolean,
     val total_items: Int
 )
