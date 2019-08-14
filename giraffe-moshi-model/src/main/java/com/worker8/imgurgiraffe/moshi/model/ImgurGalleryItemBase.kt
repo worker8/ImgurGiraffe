@@ -42,6 +42,7 @@ data class ImgurGalleryAlbum(
 data class ImgurGalleryImage(
     val animated: Boolean, // image specific
     val bandwidth: Long, // image specific
+    // this can be String or Int type,
     val edited: Int, // image specific
     val gifv: String?, // image specific
     val has_sound: Boolean, // image specific
