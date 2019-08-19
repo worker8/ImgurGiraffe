@@ -4,9 +4,10 @@ import java.util.*
 
 object Secrets {
     private const val IMGUR_API_KEY = "IMGUR_API_KEY"
+    private const val IMGUR_API_SECRET = "IMGUR_API_SECRET"
 
     val imgurApiKey = apiKeysProperties().getProperty(IMGUR_API_KEY)
-
+    val imgurApiSecret =  apiKeysProperties().getProperty(IMGUR_API_SECRET)
     private fun apiKeysProperties(): Properties {
         val filename = "api_keys.properties"
         val file = File(filename)

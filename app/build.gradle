@@ -13,6 +13,14 @@ android {
         versionName Versions.AndroidConfigs.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        debug {
+            keyAlias "pixels-key-alias"
+            keyPassword "pixelsreddit"
+            storeFile file("../pixels-key.jks")
+            storePassword "pixelsreddit"
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false

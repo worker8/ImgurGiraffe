@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Imgur Giraffe</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="server_client_id">201125745400-k5vni7j6eagiji8s6tglugv9a0j0777h.apps.googleusercontent.com</string>
+    <string name="login">Login</string>
+    <string name="continue_as_guest">Continue as Guest</string>
 </resources>
