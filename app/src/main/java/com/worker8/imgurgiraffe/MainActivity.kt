@@ -6,16 +6,14 @@ import android.util.Log
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.activity_webview.*
 
 
 class MainActivity : AppCompatActivity() {
     val RC_SIGN_IN = 23828;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+        setContentView(R.layout.activity_webview)
 
         //intent.data.fragment.split("&")
         webView.webViewClient = object : WebViewClient() {
