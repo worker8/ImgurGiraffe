@@ -1,8 +1,10 @@
 package com.worker8.imgurgiraffe
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
@@ -30,7 +32,13 @@ class MainActivity : AppCompatActivity() {
                 }
                 return true
             }
+
+            override fun onPageFinished(view: WebView?, url: String?) {
+                webViewLoading.visibility = View.GONE
+            }
         }
+        webView.setBackgroundColor(Color.BLACK)
+
         webView.settings.apply {
             javaScriptEnabled = true
             javaScriptCanOpenWindowsAutomatically = true
