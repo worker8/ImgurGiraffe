@@ -22,6 +22,10 @@ android {
         }
     }
     buildTypes {
+        all {
+            buildConfigField "String", "IMGUR_API_CLIENT_ID", "\"" + Secrets.imgurApiKey + "\""
+            buildConfigField "String", "IMGUR_API_CLIENT_SECRET", "\"" + Secrets.imgurApiSecret + "\""
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -31,7 +35,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-//android
+    implementation project(":giraffe-ui")
+
+    // android
     implementation "android.arch.paging:rxjava2:$Versions.pagingRx"
     implementation "androidx.appcompat:appcompat:$Versions.androidX"
     implementation "androidx.constraintlayout:constraintlayout:$Versions.constraintLayout"
@@ -60,6 +66,6 @@ dependencies {
 
     testImplementation "junit:junit:$Versions.junit"
     testImplementation "io.mockk:mockk:$Versions.mockk"
-    androidTestImplementation "androidx.test.ext:junit:1.1.1"
-    androidTestImplementation "androidx.test.espresso:espresso-core:3.2.0"
+    androidTestImplementation "androidx.test.ext:junit:$Versions.junitExt"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$Versions.espressoCore"
 }

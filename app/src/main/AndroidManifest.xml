@@ -22,23 +22,20 @@
         <activity
             android:name=".DeepLinkActivity"
             android:label="Deep Link Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.VIEW"/>-->
 
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <!--<category android:name="android.intent.category.BROWSABLE"/>-->
+                <!--<category android:name="android.intent.category.DEFAULT"/>-->
 
-                <data
-                    android:scheme="http"
-                    android:host="imgurgiraffe.com"/>
+                <!--<data-->
+                    <!--android:scheme="http"-->
+                    <!--android:host="imgurgiraffe.com"/>-->
 
-            </intent-filter>
+            <!--</intent-filter>-->
         </activity>
 
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.WebView.NoActionBar"/>
+
     </application>
 
 </manifest>
