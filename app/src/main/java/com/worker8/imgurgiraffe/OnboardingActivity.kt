@@ -5,8 +5,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
-import com.worker8.imgurgiraffe.ui.ImgurLoginResponse
+import com.worker8.imgurgiraffe.common.session.UserSessionPreference
 import com.worker8.imgurgiraffe.ui.OAuthLoginActivity
+import com.worker8.imgurgiraffe.ui.UserSession
 import kotlinx.android.synthetic.main.activity_onboarding.*
 
 
@@ -32,8 +33,10 @@ class OnboardingActivity : AppCompatActivity() {
             //TODO: Handle RESULT_CANCEL case
             Log.d("ddw", "response from OnboardingActivity, data: ${data}")
             data?.let {
-                val response = ImgurLoginResponse.fromIntent(it)
-                Log.d("ddw", "response from OnboardingActivity: ${response}")
+                val userSession = UserSession.fromIntent(it)
+                UserSessionPreference.saveUserSession(this@OnboardingActivity, userSession)
+                startActivity(Intent(this@OnboardingActivity, MainActivity::class.java))
+                finish()
             }
         }
 

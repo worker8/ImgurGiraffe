@@ -26,7 +26,7 @@ class OAuthLoginActivity : AppCompatActivity() {
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
                 if (url.contains(Callback)) {
                     webViewLoading.visibility = View.GONE
-                    val response = ImgurLoginExtrator(url).process()
+                    val response = ImgurLoginExtrator.processUrl(url)
                     val intent = Intent().apply {
                         putExtra("access_token", response.accessToken)
                         putExtra("expires_in", response.expiresIn)

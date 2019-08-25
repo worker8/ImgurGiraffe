@@ -1,4 +1,4 @@
-package com.worker8.imgurgiraffe
+package com.worker8.imgurgiraffe.util
 
 import android.content.Context
 import android.content.SharedPreferences

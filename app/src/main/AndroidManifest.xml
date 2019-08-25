@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.worker8.imgurgiraffe">
+    package="com.worker8.imgurgiraffe">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,31 +11,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:theme="@style/AppTheme.NoActionBar"
             android:name=".OnboardingActivity"
-            android:label="Onboarding">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+            android:label="Onboarding"
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
         <activity
-            android:name=".DeepLinkActivity"
-            android:label="Deep Link Activity">
+            android:name=".GatewayActivity"
+            android:label="GatewayActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.VIEW"/>-->
+            <!--<action android:name="android.intent.action.VIEW"/>-->
 
-                <!--<category android:name="android.intent.category.BROWSABLE"/>-->
-                <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--<category android:name="android.intent.category.BROWSABLE"/>-->
+            <!--<category android:name="android.intent.category.DEFAULT"/>-->
 
-                <!--<data-->
-                    <!--android:scheme="http"-->
-                    <!--android:host="imgurgiraffe.com"/>-->
+            <!--<data-->
+            <!--android:scheme="http"-->
+            <!--android:host="imgurgiraffe.com"/>-->
 
             <!--</intent-filter>-->
         </activity>
 
-
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
