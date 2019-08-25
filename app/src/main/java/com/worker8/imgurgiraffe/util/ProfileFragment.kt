@@ -21,6 +21,7 @@ class ProfileFragment : Fragment() {
                 if (userSession != null) {
                     profileSignOutButton.visibility = View.VISIBLE
                     profileSignOutButton.setOnClickListener {
+                        UserSessionPreference.clearGuest(_activity)
                         if (UserSessionPreference.clearUserSession(_activity)) {
                             startActivity(Intent(_activity, GatewayActivity::class.java))
                             _activity.finishAffinity()
@@ -32,9 +33,6 @@ class ProfileFragment : Fragment() {
                         startActivity(Intent(_activity, OnboardingActivity::class.java))
                     }
                 }
-            }
-            profileSignOutButton.setOnClickListener {
-
             }
         }
         return view

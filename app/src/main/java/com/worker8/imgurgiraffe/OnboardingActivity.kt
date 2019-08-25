@@ -49,6 +49,6 @@ class OnboardingActivity : AppCompatActivity() {
 
     fun navigateToMain() {
         startActivity(Intent(this@OnboardingActivity, MainActivity::class.java))
-        finish()
+        finishAffinity()
     }
 }
