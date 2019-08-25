@@ -1,7 +1,8 @@
-package com.worker8.imgurgiraffe
+package com.worker8.imgurgiraffe.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.worker8.imgurgiraffe.R
 import com.worker8.imgurgiraffe.util.ProfileFragment
 
 class MainActivity : AppCompatActivity() {

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.worker8.imgurgiraffe.common.session.UserSessionPreference
+import com.worker8.imgurgiraffe.ui.main.MainActivity
 
 class GatewayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

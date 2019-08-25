@@ -30,6 +30,10 @@ class UserSessionPreference {
             context.defaultPrefs().save(GuestSessionKey, true)
         }
 
+        fun clearGuest(context: Context) {
+            context.defaultPrefs().save(GuestSessionKey, false)
+        }
+
         fun isGuest(context: Context): Boolean {
             return context.defaultPrefs().get(GuestSessionKey, false)
         }

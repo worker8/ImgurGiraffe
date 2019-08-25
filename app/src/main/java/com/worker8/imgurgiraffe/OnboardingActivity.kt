@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.worker8.imgurgiraffe.common.session.UserSessionPreference
 import com.worker8.imgurgiraffe.ui.OAuthLoginActivity
 import com.worker8.imgurgiraffe.ui.UserSession
+import com.worker8.imgurgiraffe.ui.main.MainActivity
 import kotlinx.android.synthetic.main.activity_onboarding.*
 
 
@@ -25,6 +26,10 @@ class OnboardingActivity : AppCompatActivity() {
         obLoginTV.setOnClickListener {
             startActivityForResult(Intent(this, OAuthLoginActivity::class.java), REQUEST_CODE)
         }
+        obGuestTV.setOnClickListener {
+            UserSessionPreference.saveGuest(this)
+            navigateToMain()
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -34,11 +39,16 @@ class OnboardingActivity : AppCompatActivity() {
             Log.d("ddw", "response from OnboardingActivity, data: ${data}")
             data?.let {
                 val userSession = UserSession.fromIntent(it)
+                UserSessionPreference.clearGuest(this@OnboardingActivity)
                 UserSessionPreference.saveUserSession(this@OnboardingActivity, userSession)
-                startActivity(Intent(this@OnboardingActivity, MainActivity::class.java))
-                finish()
+                navigateToMain()
             }
         }
 
+    }
+
+    fun navigateToMain() {
+        startActivity(Intent(this@OnboardingActivity, MainActivity::class.java))
+        finish()
     }
 }
